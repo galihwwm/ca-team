@@ -1,3 +1,3 @@
-# CA-Team
+# CA-Gen (Compliance Assurance Generative AI) oleh CA-Team
 Asisten cerdas untuk evaluasi dokumen berbasis generative AI dengan fitur chatbot dan fitur analisis dokumen
 dibangun untuk LAN Datathon 2025
