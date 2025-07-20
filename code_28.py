@@ -5,6 +5,8 @@ import mimetypes
 import textwrap
 from PIL import Image
 
+
+openai_client = get_openai_client()
 # --- Chunking Functions ---
 def heading_chunk_pdf(filepath):
     doc = pymupdf.open(filepath)
