@@ -29,8 +29,13 @@ from concurrent.futures import ThreadPoolExecutor
 from tiktoken import encoding_for_model
 from openai import OpenAI
 
-load_dotenv()
-openai_client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+#load_dotenv()
+#openai_client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+def get_openai_client():
+    api_key = os.getenv("OPENAI_API_KEY")
+    if not api_key:
+        raise ValueError("Missing OPENAI_API_KEY environment variable.")
+    return openai.OpenAI(api_key=api_key)
 
 # --- PATCH for from_openai_message (Avoid recursion) ---
 from llama_index.multi_modal_llms.openai import base as openai_mm_base
