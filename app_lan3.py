@@ -18,7 +18,9 @@ from code_28 import (
     UserAgent,
     ReportGenerator
 )
-from imports_and_helpers3_patched import sanitize_filename
+from imports_and_helpers3_patched import sanitize_filename, get_openai_client
+
+openai_client = get_openai_client()
 
 def format_duration(seconds):
     if seconds < 60:
